@@ -13,6 +13,20 @@ header {
     background-color: var(--space);
 }
 
-nav a,h1 a,h1,h2,h3,h4 {
+a,h1,h2,h3,h4 {
     color: var(--mandarin)
+}
+
+.post {
+    background-color: var(--coral);
+    border-radius: 12px;
+}
+
+.post p{
+    font-size: 120%;
+    color: white;
+}
+
+.post .signature {
+    color: var(--silver);
 }
