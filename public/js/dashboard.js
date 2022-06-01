@@ -3,6 +3,7 @@ const newFormHandler = async (event) => {
   
     const name = document.querySelector('#post-name').value.trim();
     const description = document.querySelector('#post-desc').value.trim();
+    console.log(name, description);
   
     if (name && description) {
       const response = await fetch(`/api/posts`, {
@@ -14,7 +15,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to create post');
       }
@@ -30,7 +31,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to delete post');
       }
