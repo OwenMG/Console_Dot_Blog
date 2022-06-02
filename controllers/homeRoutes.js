@@ -11,6 +11,17 @@ router.get('/', async (req, res) => {
             model: User,
             attributes: ['name'],
           },
+          {
+            model: Comment,
+            attributes: ['content', 'date_created'],
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                  },
+            ],
+        },
+
         ],
       });
   
@@ -66,10 +77,21 @@ router.get('/post/:id', async (req, res) => {
             model: User,
             attributes: ['name'],
           },
+          {
+              model: Comment,
+              attributes: ['content', 'date_created'],
+              include: [
+                  {
+                      model: User,
+                      attributes: ['name'],
+                    },
+              ],
+          },
         ],
       });
   
       const post = postData.get({ plain: true });
+      console.log(post);
   
       res.render('post', {
         ...post,

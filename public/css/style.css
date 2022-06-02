@@ -30,3 +30,7 @@ a,h1,h2,h3,h4 {
 .post .signature {
     color: var(--silver);
 }
+.commentarea{
+    display:flex;
+    flex-direction: column;
+}
