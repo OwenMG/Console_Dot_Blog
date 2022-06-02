@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS conblog_db;
+CREATE DATABASE conblog_db;

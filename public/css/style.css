@@ -1,0 +1,36 @@
+:root{
+    --coral: #4F5D75;
+    --mandarin: #EF8354;
+    --silver: #BFC0C0;
+    --space: #2D3142;
+}
+body {
+    background-color: var(--silver);
+}
+
+header {
+    padding: 5px;
+    background-color: var(--space);
+}
+
+a,h1,h2,h3,h4 {
+    color: var(--mandarin)
+}
+
+.post {
+    background-color: var(--coral);
+    border-radius: 12px;
+}
+
+.post p{
+    font-size: 120%;
+    color: white;
+}
+
+.post .signature {
+    color: var(--silver);
+}
+.commentarea{
+    display:flex;
+    flex-direction: column;
+}
